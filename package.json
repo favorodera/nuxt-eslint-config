@@ -16,5 +16,13 @@
     "build": "tsc",
     "prepublishOnly": "npm run build"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/favorodera/nuxt-eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/favorodera/nuxt-eslint-config/issues"
+  },
+  "homepage": "https://github.com/favorodera/nuxt-eslint-config#readme"
 }
