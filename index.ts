@@ -1,15 +1,11 @@
 import type { ResolvableFlatConfig } from 'eslint-flat-config-utils'
-import { dirname } from 'path'
-import { fileURLToPath } from 'url'
+import { resolve } from 'path'
 import tailwind from 'eslint-plugin-tailwindcss'
-
-const urlToPath = fileURLToPath(import.meta.url)
-const dir = dirname(urlToPath)
 
 /**
  * Generate ESLint flat configs for Nuxt with stylistic and Tailwind rules.
  *
- * @param cssConfigFile Path to the Tailwind CSS config file `default`=`/app/assets/styles/index.css`
+ * @param cssConfigFile Path to the Tailwind CSS config file `default:/app/assets/styles/index.css`
  * @returns ESLint flat config objects.
  */
 function config(cssConfigFile: string = '/app/assets/styles/index.css'): ResolvableFlatConfig[] {
@@ -29,10 +25,10 @@ function config(cssConfigFile: string = '/app/assets/styles/index.css'): Resolva
       ...tailwind.configs['flat/recommended'],
       settings: {
         tailwindcss: {
-          config: `${dir}${cssConfigFile}`,
+          config: resolve(process.cwd(), cssConfigFile),
         },
       },
-    }
+    },
   ]
 }
 
