@@ -14,6 +14,5 @@ npm install @favorodera/nuxt-eslint-config
 import withNuxt from './.nuxt/eslint.config.mjs'
 import config from '@favorodera/nuxt-eslint-config'
 
-// CSS config file for Tailwind 4 linting
-export default withNuxt(config('/app/assets/styles/index.css'))
+export default withNuxt(config)
 ```
