@@ -1,6 +1,6 @@
 {
   "name": "@favorodera/nuxt-eslint-config",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "ESLint configuration for my Nuxt projects",
   "main": "dist/index.js",
   "type": "module",
@@ -14,7 +14,7 @@
     "eslint-flat-config-utils": "^2.1.1",
     "typescript": "^5.9.2"
   },
-"  dependencies": {
+  "dependencies": {
     "eslint-plugin-tailwindcss": "^4.0.0-beta.0"
   },
   "scripts": {
